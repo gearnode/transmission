@@ -50,6 +50,7 @@ class tr_bitfield;
 class tr_rpc_server;
 class tr_web;
 struct Bandwidth;
+struct struct_utp_context;
 struct tr_address;
 struct tr_announcer;
 struct tr_announcer_udp;
@@ -349,6 +350,7 @@ public:
     struct event* udp_event = nullptr;
     struct event* udp6_event = nullptr;
 
+    struct struct_utp_context* utp_context = nullptr;
     struct event* utp_timer = nullptr;
 
     /* The open port on the local machine for incoming peer requests */
